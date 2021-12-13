@@ -21,7 +21,7 @@ public class TicketsService{
         return ticketsRepository.findById(id).orElse(null);
     }
 
-    public List<Tickets> Tickets() {
+    public List<Tickets> getTickets() {
         return ticketsRepository.findAll();
     }
 
