@@ -11,9 +11,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @Configuration
-@ComponentScan(basePackages = "com.j2ee.tdspring")
-@EntityScan("com.j2ee.tdspring.entities")
-@EnableJpaRepositories("com.j2ee.tdspring.repositories")
+@ComponentScan(basePackages = "com.j2ee.ticketing-java-back")
+@EntityScan("com.j2ee.ticketing.entities")
+@EnableJpaRepositories("com.j2ee.ticketing.repositories")
 public class ConfigSpring extends SpringBootServletInitializer {
 public static void main(String[] args) {
 SpringApplication.run(ConfigSpring.class, args);
