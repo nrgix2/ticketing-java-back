@@ -17,9 +17,10 @@ public class UsersController {
     public Users getUsers(@RequestParam(value = "id") Integer id) {
         return usersService.getUsersById(id);
     }
+    
     /*
     @GetMapping(path = "/users/mail")
-    public Users sendUserMail(@RequestParam(value = "id") Integer id) {
+    public Users sendUserMail() {
 
 		Email email = EmailBuilder.startingBlank()
 		.from("hello", "antoinemousset1999@gmail.com")
@@ -29,8 +30,8 @@ public class UsersController {
 		.buildEmail();
 		mailer.sendMail(email);		
     }
-    */
-
+    
+*/
     @PutMapping("/users")
     public Users addOrUpdatePatients(@RequestBody Users users) {
         return usersService.createOrUpdate(users);
