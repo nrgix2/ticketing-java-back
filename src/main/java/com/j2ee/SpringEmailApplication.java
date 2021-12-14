@@ -17,6 +17,7 @@ public class SpringEmailApplication {
 		SpringApplication.run(SpringEmailApplication.class, args);
 	}
 
+	/*
 	@EventListener(ApplicationReadyEvent.class)
 	public void triggerMain() throws MessagingException {
 
@@ -25,5 +26,5 @@ public class SpringEmailApplication {
 				"This is email subject","");
 
 	}
-
+*/
 }
