@@ -4,8 +4,6 @@ import com.j2ee.ticketing.entities.Users;
 import com.j2ee.ticketing.services.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.simplejavamail.api.email.Email;
-import org.simplejavamail.email.EmailBuilder;
 
 
 import java.util.List;
