@@ -4,6 +4,9 @@ import com.j2ee.ticketing.entities.Users;
 import com.j2ee.ticketing.services.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.simplejavamail.api.email.Email;
+import org.simplejavamail.email.EmailBuilder;
+
 
 import java.util.List;
 
@@ -16,6 +19,19 @@ public class UsersController {
     public Users getUsers(@RequestParam(value = "id") Integer id) {
         return usersService.getUsersById(id);
     }
+    /*
+    @GetMapping(path = "/users/mail")
+    public Users sendUserMail(@RequestParam(value = "id") Integer id) {
+
+		Email email = EmailBuilder.startingBlank()
+		.from("hello", "antoinemousset1999@gmail.com")
+		.to("M. Mousset", "antoinemousset1999@gmail.com")
+		.withSubject("hey")
+		.withPlainText("We should meet up! ;)")
+		.buildEmail();
+		mailer.sendMail(email);		
+    }
+    */
 
     @PutMapping("/users")
     public Users addOrUpdatePatients(@RequestBody Users users) {

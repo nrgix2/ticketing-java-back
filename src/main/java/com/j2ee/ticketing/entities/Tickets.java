@@ -6,8 +6,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.Valid;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity
 @Table(name="tickets")
 public class Tickets {
@@ -39,5 +37,5 @@ public class Tickets {
 			this.status = status;
 		}
 
-		}
+	}
 

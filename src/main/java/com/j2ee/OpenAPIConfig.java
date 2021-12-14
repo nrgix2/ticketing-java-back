@@ -9,7 +9,7 @@ public class OpenAPIConfig {
 @Bean
 public OpenAPI customOpenAPI() {
 License license = new License().name("Apache2.0").url("https://springdoc.org/");
-Info info = new Info().title("J2EE Ticketing RESTAPI").version("v0.0.1").license(license);
+Info info = new Info().title("J2EE TD Spring RESTAPI").version("v0.0.1").license(license);
 return new OpenAPI().info(info);
 }
 @Bean
