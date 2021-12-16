@@ -2,6 +2,8 @@ package com.j2ee.ticketing.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.Valid;
@@ -12,7 +14,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name="users")
 public class Users {
 	
-	 	@Id
+	
+		@Id
+		@Column(name="id", unique=true, nullable=false)
+		@GeneratedValue(strategy=GenerationType.IDENTITY)
+		public int id;
+	
 	 	@Valid
 	    @Column(name="Username")
 	    private String username;
@@ -84,6 +91,14 @@ public class Users {
 
 		public void setTelephone(int telephone) {
 			this.telephone = telephone;
+		}
+		
+		public int getId() {
+			return id;
+		}
+
+		public void setId(int id) {
+			this.id = id;
 		}
 
 }
