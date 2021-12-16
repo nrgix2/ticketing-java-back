@@ -31,13 +31,12 @@ public class Users {
 	 	@Valid
 	    @Column(name="lastname", length=30, nullable=false)
 	    private String lastname;
-	 	
+	 	 
 	 	@Valid
 	    @Column(name="role", length=30, nullable=false)
 	    private String role;
 	 	
 	 	@Valid
-	 	@JsonIgnore
 	    @Column(name="password", length=30, nullable=false)
 	    private String password;
 
