@@ -25,6 +25,10 @@ public class Tickets {
 	 	@Valid
 	    @Column(name="status", length=30, nullable=false)
 	    private String status;
+	 	
+	 	@Valid
+	    @Column(name="descritpion", length=30, nullable=false)
+	    private String descritpion;
 
 	 	
 	 	public String getName() {
@@ -44,7 +48,15 @@ public class Tickets {
 			this.status = status;
 		}
 		
-		public int getId() {
+		public String getDescription() {
+			return status;
+		}
+
+		public void setDescription(String descritpion) {
+			this.descritpion = descritpion;
+		}
+		
+		public int getId() { 
 			return id;
 		}
 
