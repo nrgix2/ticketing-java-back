@@ -2,6 +2,8 @@ package com.j2ee.ticketing.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.Valid;
@@ -10,7 +12,12 @@ import javax.validation.Valid;
 @Table(name="tickets")
 public class Tickets {
 	
-	 	@Id
+	 
+		@Id
+		@Column(name="id", unique=true, nullable=false)
+		@GeneratedValue(strategy=GenerationType.IDENTITY)
+		public int id;
+	
 	 	@Valid
 	    @Column(name="Name")
 	    private String name;
@@ -35,6 +42,14 @@ public class Tickets {
 
 		public void setStatus(String status) {
 			this.status = status;
+		}
+		
+		public int getId() {
+			return id;
+		}
+
+		public void setId(int id) {
+			this.id = id;
 		}
 
 	}
