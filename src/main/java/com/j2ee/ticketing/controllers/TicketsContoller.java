@@ -12,6 +12,8 @@ public class TicketsContoller {
     @Autowired
     private TicketsService ticketsService;
 
+    
+    @CrossOrigin(origins="*")
     @GetMapping(path = "/tickets")
     public Tickets getTickets(@RequestParam(value = "id") Integer id) {
         return ticketsService.getTicketsById(id);

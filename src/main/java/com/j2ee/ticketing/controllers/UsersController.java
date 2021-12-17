@@ -1,7 +1,9 @@
 package com.j2ee.ticketing.controllers;
 
 import com.j2ee.ticketing.entities.Users;
+import com.j2ee.ticketing.entities.Tickets;
 import com.j2ee.ticketing.services.UsersService;
+import com.j2ee.SendEmail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +14,9 @@ import java.util.List;
 public class UsersController {
     @Autowired
     private UsersService usersService;
+    private SendEmail sendEmail;
 
+    @CrossOrigin(origins ="*")
     @GetMapping(path = "/users")
     public Users getUsers(@RequestParam(value = "id") Integer id) {
         return usersService.getUsersById(id);
@@ -32,16 +36,26 @@ public class UsersController {
     }
     
 */
+    
+    @CrossOrigin(origins ="*")
+    @PostMapping(path = "/sendMail")
+    public Users sendUserMail(@RequestBody Users user_mail, Tickets status) {
+		return SendEmail.main(null, user_mail, status);	
+    }
+    
+    @CrossOrigin(origins ="*")
     @PutMapping("/users")
     public Users addOrUpdatePatients(@RequestBody Users users) {
         return usersService.createOrUpdate(users);
     }
 
+    @CrossOrigin(origins ="*")
     @GetMapping("/users/all")
     public List<Users> getUsers() {
         return usersService.getUsers();
     }
 
+    @CrossOrigin(origins ="*")
     @DeleteMapping("/users")
     public void deleteMessages(@RequestParam(value = "id") Integer id) {
     	usersService.deleteUsers(id);
