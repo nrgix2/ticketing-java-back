@@ -24,7 +24,7 @@ public class Tickets {
 
 	 	@Valid
 	    @Column(name="status", length=30, nullable=false)
-	    private String status;
+		public static String status;
 	 	
 	 	@Valid
 	    @Column(name="descritpion", length=30, nullable=false)
@@ -45,7 +45,7 @@ public class Tickets {
 		}
 
 		public void setStatus(String status) {
-			this.status = status;
+			Tickets.status = status;
 		}
 		
 		public String getDescription() {

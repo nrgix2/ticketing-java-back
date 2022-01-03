@@ -39,8 +39,8 @@ public class UsersController {
     
     @CrossOrigin(origins ="*")
     @PostMapping(path = "/sendMail")
-    public Users sendUserMail(@RequestBody Users user_mail, Tickets status) {
-		return SendEmail.main(null, user_mail, status);	
+    public Users sendUserMail(@RequestParam String email, @RequestParam String status) {
+		return SendEmail.sendMail(email, status);	
     }
     
     @CrossOrigin(origins ="*")

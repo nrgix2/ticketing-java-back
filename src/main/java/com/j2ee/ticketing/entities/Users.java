@@ -30,7 +30,11 @@ public class Users {
 
 	 	@Valid
 	    @Column(name="lastname", length=30, nullable=false)
-	    private String lastname;
+		public static String lastname;
+	 	
+		@Valid
+	    @Column(name="email", length=30, nullable=false)
+		public static String email;
 	 	 
 	 	@Valid
 	    @Column(name="role", length=30, nullable=false)
@@ -81,8 +85,17 @@ public class Users {
 		}
 
 		public void setLastname(String lastname) {
-			this.lastname = lastname;
+			Users.lastname = lastname;
 		}
+		
+		public String getEmail() {
+			return email;
+		}
+
+		public void setEmail(String email) {
+			Users.email = email;
+		}
+
 
 		public int getTelephone() {
 			return telephone;
