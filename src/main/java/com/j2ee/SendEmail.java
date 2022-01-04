@@ -53,7 +53,8 @@ try {
 
  
  // Put the content of your message
- if (status == "done" ) {
+ 
+ if (status.equals("done") ) {
  message.setText("Votre ticket a été traité");
  }
  else {
