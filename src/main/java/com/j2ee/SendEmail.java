@@ -19,7 +19,7 @@ public class SendEmail  {
  String to = email;
 
 // Add sender
- String from = "antoinemousset1999@gmail.com";
+ String from = "ticketi@auto.com";
  final String username = "antoinemousset1999@gmail.com";//your Gmail username 
  final String password = "dfzbcdigrromeuvt";//your Gmail password
 
@@ -53,12 +53,18 @@ try {
 
  
  // Put the content of your message
- 
+ String newLine = System.getProperty("line.separator");
  if (status.equals("done") ) {
- message.setText("Votre ticket a été traité");
+	 message.setText("Bonjour, "
+		 		+ newLine + "Votre ticket à été traité"
+		 		+ newLine + "Cordialement."
+		 		+ newLine + "Société Ticketi");
  }
  else {
-	 message.setText("Votre ticket est en cours de traitement");
+	 message.setText("Bonjour, "
+	 		+ newLine + "Votre ticket est en cours de traitement"
+	 		+ newLine + "Cordialement."
+	 		+ newLine + "Société Ticketi");
  }
 
 // Send message
