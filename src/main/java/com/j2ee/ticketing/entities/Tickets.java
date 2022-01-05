@@ -31,23 +31,29 @@ public class Tickets {
 
 	 	
 	 	@Valid
-	    @Column(name="descritpion", length=255, nullable=false)
-	    private String descritpion;
+	    @Column(name="description", length=255, nullable=false)
+	    private String description;
 	 	
+	 	 @ManyToOne()
+	     @JoinColumn(name = "admin_id")
+	     private Users admin;
+	 	 
 	 	 @ManyToOne()
 	     @JoinColumn(name = "user_id")
 	     private Users user;
 
 
-	 	
-	 	public String getDescritpion() {
-			return descritpion;
+		public Users getAdmin() {
+			return admin;
 		}
 
-		public void setDescritpion(String descritpion) {
-			this.descritpion = descritpion;
+		public void setAdmin(Users admin) {
+			this.admin = admin;
 		}
 
+		public void setDescription(String description) {
+			this.description = description;
+		}
 
 		public Users getUser() {
 			return user;
@@ -75,12 +81,9 @@ public class Tickets {
 		}
 		
 		public String getDescription() {
-			return status;
+			return description;
 		}
 
-		public void setDescription(String descritpion) {
-			this.descritpion = descritpion;
-		}
 		
 		public int getId() { 
 			return id;

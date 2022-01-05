@@ -25,17 +25,17 @@ public class Users {
 	    private String username;
 
 	 	@Valid
-	    @Column(name="firstname", length=30, nullable=false)
+	    @Column(name="firstname", length=30, nullable=false) 
 	    private String firstname;
 
 	 	@Valid
 	    @Column(name="lastname", length=30, nullable=false)
-		public static String lastname;
+	 	private String lastname;
 	 	
-		@Valid
-	    @Column(name="email", length=30, nullable=false)
-		public static String email;
-	 	 
+	 	@Valid
+	    @Column(name="email", length=100, nullable=false)
+	 	private String email;
+
 	 	@Valid
 	    @Column(name="role", length=30, nullable=false)
 	    private String role;
@@ -80,22 +80,23 @@ public class Users {
 			this.firstname = firstname;
 		}
 
+
+
 		public String getLastname() {
 			return lastname;
 		}
 
 		public void setLastname(String lastname) {
-			Users.lastname = lastname;
+			this.lastname = lastname;
 		}
-		
+
 		public String getEmail() {
 			return email;
 		}
 
 		public void setEmail(String email) {
-			Users.email = email;
+			this.email = email;
 		}
-
 
 		public int getTelephone() {
 			return telephone;

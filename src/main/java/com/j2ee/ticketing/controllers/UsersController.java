@@ -38,7 +38,7 @@ public class UsersController {
 */
     
     @CrossOrigin(origins ="*")
-    @PostMapping(path = "/sendMail")
+    @PutMapping(path = "/sendMail")
     public Users sendUserMail(@RequestParam String email, @RequestParam String status) {
 		return SendEmail.sendMail(email, status);	
     }
