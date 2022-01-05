@@ -60,11 +60,14 @@ try {
 		 		+ newLine + "Cordialement."
 		 		+ newLine + "Société Ticketi");
  }
- else {
+ else if (status.equals("pending")){
 	 message.setText("Bonjour, "
 	 		+ newLine + "Votre ticket est en cours de traitement"
 	 		+ newLine + "Cordialement."
 	 		+ newLine + "Société Ticketi");
+ }
+ else {
+	 System.out.println("The status doesn't exist");
  }
 
 // Send message
