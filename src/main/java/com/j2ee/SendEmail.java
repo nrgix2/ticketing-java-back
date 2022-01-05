@@ -21,7 +21,7 @@ public class SendEmail  {
 // Add sender
  String from = "ticketi@auto.com";
  final String username = "antoinemousset1999@gmail.com";//your Gmail username 
- final String password = "dfzbcdigrromeuvt";//your Gmail password
+ final String password = "";//your Gmail password
 
 String host = "smtp.gmail.com";
 
